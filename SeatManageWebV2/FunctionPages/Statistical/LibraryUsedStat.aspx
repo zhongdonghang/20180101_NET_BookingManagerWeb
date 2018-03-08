@@ -21,9 +21,9 @@
         }
     </style>
 </head>
-<body bgcolor="#DFE8F6">
+<body bgcolor="#d0ebe2">
     <form id="form1" runat="server">
-    <table width="800" style="background: #DFE8F6;">
+    <table width="800" style="background: #d0ebe2;">
         <tr align="center">
             <td>
                 <span class="style2">欢迎使用座位预约平台</span>
@@ -44,7 +44,7 @@
         <tr>
             <td>
                 <asp:Chart ID="librarySeatUsedInfo" runat="server" Height="420px" Width="799px" 
-                    BackColor="223, 232, 246" Palette="None" 
+                    BackColor="208,205,226" Palette="None" 
                     PaletteCustomColors="Tomato; YellowGreen" AlternateText="对不起此图书馆暂无数据！">
                     <Series>
                        
@@ -59,7 +59,7 @@
                     </Series>
                     <ChartAreas>
                         <asp:ChartArea Name="ChartArea1" IsSameFontSizeForAllAxes="True" 
-                            BackColor="223, 232, 246">
+                            BackColor="208,205,226">
                             <AxisX TextOrientation="Rotated90" >
                             </AxisX>
                             <AxisX2 TextOrientation="Rotated90">
@@ -68,7 +68,7 @@
                     </ChartAreas>
                     <Legends>
                         <asp:Legend Name="Legend1" Title="图例" Docking="Top" IsDockedInsideChartArea="False"
-                            BackColor="223, 232, 246">
+                            BackColor="208,205,226">
                         </asp:Legend>
                     </Legends>
                     <Titles>

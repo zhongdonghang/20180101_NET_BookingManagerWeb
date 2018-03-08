@@ -33,9 +33,9 @@
         }
     </style>
 </head>
-<body bgcolor="#DFE8F6">
+<body bgcolor="#d0ebe2">
     <form id="form1" runat="server">
-    <table width="800" style="background: #DFE8F6;">
+    <table width="800" style="background: #d0ebe2;">
         <tr align="center">
             <td colspan="3">
                 <span class="style2">座位使用情况统计</span>
@@ -91,12 +91,12 @@
         </tr>
         <tr>
             <td>
-                <asp:Chart ID="Chart1" runat="server" Height="350px" Width="320px" BackColor="223, 232, 246"
+                <asp:Chart ID="Chart1" runat="server" Height="350px" Width="320px" BackColor="208,205,226"
                     Palette="None" AlternateText="对不起此图书馆暂无数据！">
                     <Series>
                     </Series>
                     <ChartAreas>
-                        <asp:ChartArea Name="ChartArea1" IsSameFontSizeForAllAxes="True" BackColor="223, 232, 246">
+                        <asp:ChartArea Name="ChartArea1" IsSameFontSizeForAllAxes="True" BackColor="208,205,226">
                             <AxisY>
                             </AxisY>
                             <AxisX TextOrientation="Rotated90">
@@ -107,18 +107,18 @@
                     </ChartAreas>
                     <Legends>
                         <asp:Legend Name="Legend1" Title="图例" Docking="Top" IsDockedInsideChartArea="False"
-                            BackColor="223, 232, 246">
+                            BackColor="208,205,226">
                         </asp:Legend>
                     </Legends>
                 </asp:Chart>
             </td>
             <td>
-                <asp:Chart ID="Chart2" runat="server" Height="350px" Width="320px" BackColor="223, 232, 246"
+                <asp:Chart ID="Chart2" runat="server" Height="350px" Width="320px" BackColor="208,205,226"
                     Palette="None" AlternateText="对不起此图书馆暂无数据！">
                     <Series>
                     </Series>
                     <ChartAreas>
-                        <asp:ChartArea Name="ChartArea1" IsSameFontSizeForAllAxes="True" BackColor="223, 232, 246">
+                        <asp:ChartArea Name="ChartArea1" IsSameFontSizeForAllAxes="True" BackColor="208,205,226">
                             <AxisY>
                             </AxisY>
                             <AxisX TextOrientation="Rotated90">
@@ -129,18 +129,18 @@
                     </ChartAreas>
                     <Legends>
                         <asp:Legend Name="Legend1" Title="图例" Docking="Top" IsDockedInsideChartArea="False"
-                            BackColor="223, 232, 246">
+                            BackColor="208,205,226">
                         </asp:Legend>
                     </Legends>
                 </asp:Chart>
             </td>
             <td colspan="2">
-                <asp:Chart ID="Chart3" runat="server" Height="350px" Width="320px" BackColor="223, 232, 246"
+                <asp:Chart ID="Chart3" runat="server" Height="350px" Width="320px" BackColor="208,205,226"
                     Palette="None" AlternateText="对不起此图书馆暂无数据！">
                     <Series>
                     </Series>
                     <ChartAreas>
-                        <asp:ChartArea Name="ChartArea1" IsSameFontSizeForAllAxes="True" BackColor="223, 232, 246">
+                        <asp:ChartArea Name="ChartArea1" IsSameFontSizeForAllAxes="True" BackColor="208,205,226">
                             <AxisY>
                             </AxisY>
                             <AxisX TextOrientation="Rotated90">
@@ -151,7 +151,7 @@
                     </ChartAreas>
                     <Legends>
                         <asp:Legend Name="Legend1" Title="图例" Docking="Top" IsDockedInsideChartArea="False"
-                            BackColor="223, 232, 246">
+                            BackColor="208,205,226">
                         </asp:Legend>
                     </Legends>
                 </asp:Chart>

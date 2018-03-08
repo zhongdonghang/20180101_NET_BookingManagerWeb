@@ -73,7 +73,7 @@
                     </ext:TextArea>
                 </Items>
             </ext:SimpleForm>
-            <table width="420px" style="background: #DFE8F6; margin-left: auto; margin-right: auto;">
+            <table width="420px" style="background: #d0ebe2; margin-left: auto; margin-right: auto;">
                 <tr>
                     <td align="right">
                         <ext:Button Text="确定" ValidateForms="SimpleForm1" runat="server" ID="btnSureAddBlacklist"
@@ -102,7 +102,7 @@
                     </ext:TextBox>
                 </Items>
             </ext:SimpleForm>
-            <table width="420px" style="background: #DFE8F6; margin-left: auto; margin-right: auto;">
+            <table width="420px" style="background: #d0ebe2; margin-left: auto; margin-right: auto;">
                 <tr>
                     <td align="right">
                         <ext:Button Text="确定" ValidateForms="SimpleForm2" runat="server" ID="btnSureAllotSeat"

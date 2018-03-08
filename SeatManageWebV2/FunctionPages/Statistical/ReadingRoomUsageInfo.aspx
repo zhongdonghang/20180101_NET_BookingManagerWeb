@@ -31,9 +31,9 @@
         }
     </style>
 </head>
-<body bgcolor="#DFE8F6">
+<body bgcolor="#d0ebe2">
     <form id="form1" runat="server">
-    <table width="900px" style="background: #DFE8F6;">
+    <table width="900px" style="background: #d0ebe2;">
         <tr align="center">
             <td>
                 <span class="style2">阅览室信息统计</span>

@@ -40,25 +40,12 @@
             height: 22px;
         }
     </style>
-    <% //zdh添加，验证表单和传输加密 %>
     <script  language="javascript" type="text/javascript">
-        //function jsEncrypt(str)
-        //{
-        //    var key = CryptoJS.enc.Utf8.parse("AjQ0YQ0MvKKC1uTr");   //加密密钥
-        //    var iv = CryptoJS.enc.Utf8.parse("AjQ0YQ0MvKKC1uTr");   //加密向量
-        //    var srcs = CryptoJS.enc.Utf8.parse(str);
-        //    var encrypted = CryptoJS.AES.encrypt(srcs, key, { iv: iv, mode: CryptoJS.mode.CBC });
-        //    return encrypted.toString();
-        //}
 
 
         function checkForm() {
             var $username = $("#txtUserName").val();
             var $password = $("#txtPassword").val();
-
-            //$username = jsEncrypt($username);
-            //$password = jsEncrypt($password);
-
             $("#txtUserName").val($username);
             $("#txtPassword").val($password);
            return true;
@@ -108,7 +95,7 @@
                                 </tr>
                                 <tr>
                                     <td height="45px" style="color:white">
-                                       首次使用请到图书馆触摸屏一体机<br />点击“预约激活”获取用户名和密码
+                                       首次使用,登陆后请绑定微信账号
                                     </td>
                                 </tr>
                             </table>

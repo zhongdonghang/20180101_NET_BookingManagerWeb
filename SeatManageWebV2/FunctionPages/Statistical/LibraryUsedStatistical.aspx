@@ -21,9 +21,9 @@
         }
     </style>
 </head>
-<body bgcolor="#DFE8F6">
+<body bgcolor="#d0ebe2">
     <form id="form1" runat="server">
-    <table width="800" style="background: #DFE8F6;">
+    <table width="800" style="background: #d0ebe2;">
         <tr align="center">
             <td>
                 <span class="style2">欢迎使用图书馆精细化管理平台</span>
@@ -44,7 +44,7 @@
         <tr>
             <td>
                 <asp:Chart ID="librarySeatUsedInfo" runat="server" Height="420px" Width="799px" 
-                    BackColor="#DFE8F6" AlternateText="对不起此图书馆暂无数据！">
+                    BackColor="#d0ebe2" AlternateText="对不起此图书馆暂无数据！">
                     <Series>
                         <asp:Series Name="SeatAmount" IsValueShownAsLabel="true" ChartArea="ChartArea1" LegendText="座位总数"
                             Legend="Legend1">
@@ -57,7 +57,7 @@
                         </asp:Series>
                     </Series>
                     <ChartAreas>
-                        <asp:ChartArea Name="ChartArea1" IsSameFontSizeForAllAxes="True" BackColor="#DFE8F6">
+                        <asp:ChartArea Name="ChartArea1" IsSameFontSizeForAllAxes="True" BackColor="#d0ebe2">
                             <AxisX TextOrientation="Rotated90">
                             </AxisX>
                             <AxisX2 TextOrientation="Rotated90">
@@ -65,7 +65,7 @@
                         </asp:ChartArea>
                     </ChartAreas>
                     <Legends>
-                        <asp:Legend Name="Legend1" Title="图例" Alignment="Near" Docking="Top" IsDockedInsideChartArea="False" BackColor="#DFE8F6">
+                        <asp:Legend Name="Legend1" Title="图例" Alignment="Near" Docking="Top" IsDockedInsideChartArea="False" BackColor="#d0ebe2">
                         </asp:Legend>
                     </Legends>
                     <Titles>

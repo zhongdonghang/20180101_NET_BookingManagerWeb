@@ -104,6 +104,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\FlomsComm\DLL\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -124,6 +125,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLL\Wilco.SyntaxHighlighter.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="CASAutoLogin.aspx" />
@@ -350,6 +352,8 @@
     <Content Include="extjs\res\images\default\box\tb-blue.gif" />
     <Content Include="extjs\res\images\default\box\tb.gif" />
     <Content Include="extjs\res\images\default\button\arrow.gif" />
+    <Content Include="extjs\res\images\default\button\btn-arrow.gif" />
+    <Content Include="extjs\res\images\default\button\btn-sprite.gif" />
     <Content Include="extjs\res\images\default\button\btn.gif" />
     <Content Include="extjs\res\images\default\button\group-cs.gif" />
     <Content Include="extjs\res\images\default\button\group-lr.gif" />
@@ -762,6 +766,7 @@
     <Content Include="FunctionPages\UsersManage\UserAuthorize.aspx" />
     <Content Include="FunctionPages\UsersManage\UserEdit.aspx" />
     <Content Include="FunctionPages\UsersManage\UserInfo.aspx" />
+    <Content Include="FunctionPages\WechatCode\MyQRCode.aspx" />
     <Content Include="Images\BookStream.png" />
     <Content Include="Images\icon\accept.png" />
     <Content Include="Images\icon\add.png" />
@@ -2547,8 +2552,238 @@
     <Content Include="Images\SeatImage\ImgShortLeave.png" />
     <Content Include="Images\SeatImage\ImgShortLeaveReader.png" />
     <Content Include="Images\SeatImage\ImgStopUse.png" />
+    <Content Include="Images\wechat.jpg" />
+    <Content Include="Index.aspx" />
     <Content Include="LogOut.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="NewContent\css\framework-about.css" />
+    <Content Include="NewContent\css\framework-font.css" />
+    <Content Include="NewContent\css\framework-login.css" />
+    <Content Include="NewContent\css\framework-theme.css" />
+    <Content Include="NewContent\css\framework-ui.css" />
+    <Content Include="NewContent\fonts\fontawesome-webfont.svg" />
+    <Content Include="NewContent\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="NewContent\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="NewContent\img\ajax-loader.gif" />
+    <Content Include="NewContent\img\alipay.jpg" />
+    <Content Include="NewContent\img\alipayimg.png" />
+    <Content Include="NewContent\img\button_pm_close.png" />
+    <Content Include="NewContent\img\cy-reward-title-bg.jpg" />
+    <Content Include="NewContent\img\loading.gif" />
+    <Content Include="NewContent\img\radio1.jpg" />
+    <Content Include="NewContent\img\radio2.jpg" />
+    <Content Include="NewContent\img\samples\angelina-300.jpg" />
+    <Content Include="NewContent\img\samples\emma-300.jpg" />
+    <Content Include="NewContent\img\samples\emma.png" />
+    <Content Include="NewContent\img\samples\george.png" />
+    <Content Include="NewContent\img\samples\head_120.png" />
+    <Content Include="NewContent\img\samples\jessica.jpg" />
+    <Content Include="NewContent\img\samples\kunis-300.jpg" />
+    <Content Include="NewContent\img\samples\kunis.png" />
+    <Content Include="NewContent\img\samples\lima-300.jpg" />
+    <Content Include="NewContent\img\samples\messages-photo-1.png" />
+    <Content Include="NewContent\img\samples\messages-photo-2.png" />
+    <Content Include="NewContent\img\samples\messages-photo-3.png" />
+    <Content Include="NewContent\img\samples\miranda-560-300.png" />
+    <Content Include="NewContent\img\samples\robert-300.jpg" />
+    <Content Include="NewContent\img\samples\robert.png" />
+    <Content Include="NewContent\img\samples\ryan-300.jpg" />
+    <Content Include="NewContent\img\samples\ryan.png" />
+    <Content Include="NewContent\img\samples\scarlet-159.png" />
+    <Content Include="NewContent\img\samples\scarlet.png" />
+    <Content Include="NewContent\img\samples\scarlett-300.jpg" />
+    <Content Include="NewContent\img\signet.gif" />
+    <Content Include="NewContent\img\wechat.jpg" />
+    <Content Include="NewContent\img\weipayimg.png" />
+    <Content Include="NewContent\img\weixin_nfine.png" />
+    <Content Include="NewContent\js\bootstrap\bootstrap.js" />
+    <Content Include="NewContent\js\bootstrap\bootstrap.min.css" />
+    <Content Include="NewContent\js\charts\Chart.js" />
+    <Content Include="NewContent\js\charts\Chart.min.js" />
+    <Content Include="NewContent\js\cookie\jquery.cookie.js" />
+    <Content Include="NewContent\js\datepicker\calendar.js" />
+    <Content Include="NewContent\js\datepicker\DatePicker.js" />
+    <Content Include="NewContent\js\datepicker\lang\en.js" />
+    <Content Include="NewContent\js\datepicker\lang\zh-cn.js" />
+    <Content Include="NewContent\js\datepicker\lang\zh-tw.js" />
+    <Content Include="NewContent\js\datepicker\skin\datePicker.gif" />
+    <Content Include="NewContent\js\datepicker\skin\datePicker.png" />
+    <Content Include="NewContent\js\datepicker\skin\datepicker_icon.png" />
+    <Content Include="NewContent\js\datepicker\skin\default\datepicker-dev.css" />
+    <Content Include="NewContent\js\datepicker\skin\default\datepicker.css" />
+    <Content Include="NewContent\js\datepicker\skin\default\img.gif" />
+    <Content Include="NewContent\js\datepicker\skin\default\img.png" />
+    <Content Include="NewContent\js\datepicker\skin\WdatePicker.css" />
+    <Content Include="NewContent\js\datepicker\skin\whyGreen\bg.jpg" />
+    <Content Include="NewContent\js\datepicker\skin\whyGreen\datepicker.css" />
+    <Content Include="NewContent\js\datepicker\skin\whyGreen\img.gif" />
+    <Content Include="NewContent\js\datepicker\WdatePicker.js" />
+    <Content Include="NewContent\js\datepicker\开发包\lang\en.js" />
+    <Content Include="NewContent\js\datepicker\开发包\lang\zh-cn.js" />
+    <Content Include="NewContent\js\datepicker\开发包\lang\zh-tw.js" />
+    <Content Include="NewContent\js\datepicker\开发包\readme.txt" />
+    <Content Include="NewContent\js\datepicker\开发包\skin\datePicker.gif" />
+    <Content Include="NewContent\js\datepicker\开发包\skin\datePicker.png" />
+    <Content Include="NewContent\js\datepicker\开发包\skin\default\datepicker.css" />
+    <Content Include="NewContent\js\datepicker\开发包\skin\default\img.gif" />
+    <Content Include="NewContent\js\datepicker\开发包\skin\WdatePicker.css" />
+    <Content Include="NewContent\js\datepicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="NewContent\js\datepicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="NewContent\js\datepicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="NewContent\js\dialog\dialog.css" />
+    <Content Include="NewContent\js\dialog\dialog.js" />
+    <Content Include="NewContent\js\dialog\img\icon-ext.png" />
+    <Content Include="NewContent\js\dialog\img\icon.png" />
+    <Content Include="NewContent\js\dialog\img\loading-0.gif" />
+    <Content Include="NewContent\js\dialog\img\loading-1.gif" />
+    <Content Include="NewContent\js\dialog\img\loading-2.gif" />
+    <Content Include="NewContent\js\dialog\img\loading-3.gif" />
+    <Content Include="NewContent\js\echarts\echarts-all.js" />
+    <Content Include="NewContent\js\echarts\echarts.js" />
+    <Content Include="NewContent\js\echarts\echarts.min.js" />
+    <Content Include="NewContent\js\echarts\infographic.js" />
+    <Content Include="NewContent\js\framework-clientdata.js" />
+    <Content Include="NewContent\js\framework-ui.js" />
+    <Content Include="NewContent\js\highcharts\adapters\mootools-adapter.js" />
+    <Content Include="NewContent\js\highcharts\adapters\mootools-adapter.src.js" />
+    <Content Include="NewContent\js\highcharts\adapters\prototype-adapter.js" />
+    <Content Include="NewContent\js\highcharts\adapters\prototype-adapter.src.js" />
+    <Content Include="NewContent\js\highcharts\adapters\standalone-framework.js" />
+    <Content Include="NewContent\js\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="NewContent\js\highcharts\highcharts-all.js" />
+    <Content Include="NewContent\js\highcharts\highcharts-more.js" />
+    <Content Include="NewContent\js\highcharts\highcharts-more.src.js" />
+    <Content Include="NewContent\js\highcharts\highcharts.js" />
+    <Content Include="NewContent\js\highcharts\highcharts.src.js" />
+    <Content Include="NewContent\js\highcharts\modules\canvas-tools.js" />
+    <Content Include="NewContent\js\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="NewContent\js\highcharts\modules\data.js" />
+    <Content Include="NewContent\js\highcharts\modules\data.src.js" />
+    <Content Include="NewContent\js\highcharts\modules\drilldown.js" />
+    <Content Include="NewContent\js\highcharts\modules\drilldown.src.js" />
+    <Content Include="NewContent\js\highcharts\modules\exporting.js" />
+    <Content Include="NewContent\js\highcharts\modules\exporting.src.js" />
+    <Content Include="NewContent\js\highcharts\modules\funnel.js" />
+    <Content Include="NewContent\js\highcharts\modules\funnel.src.js" />
+    <Content Include="NewContent\js\highcharts\modules\no-data-to-display.js" />
+    <Content Include="NewContent\js\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="NewContent\js\highcharts\themes\dark-blue.js" />
+    <Content Include="NewContent\js\highcharts\themes\dark-green.js" />
+    <Content Include="NewContent\js\highcharts\themes\gray.js" />
+    <Content Include="NewContent\js\highcharts\themes\grid.js" />
+    <Content Include="NewContent\js\highcharts\themes\skies.js" />
+    <Content Include="NewContent\js\index.js" />
+    <Content Include="NewContent\js\indextab.js" />
+    <Content Include="NewContent\js\jqgrid\grid.locale-cn.js" />
+    <Content Include="NewContent\js\jqgrid\jqgrid.css" />
+    <Content Include="NewContent\js\jqgrid\jqgrid.min.js" />
+    <Content Include="NewContent\js\jqprint\jquery.jqprint-0.3.js" />
+    <Content Include="NewContent\js\jqprint\jquery.jqprint.css" />
+    <Content Include="NewContent\js\jquery-ui\images\calendar.gif" />
+    <Content Include="NewContent\js\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="NewContent\js\jquery-ui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="NewContent\js\jquery-ui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="NewContent\js\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="NewContent\js\jquery-ui\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="NewContent\js\jquery-ui\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="NewContent\js\jquery-ui\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="NewContent\js\jquery-ui\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="NewContent\js\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="NewContent\js\jquery-ui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="NewContent\js\jquery-ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="NewContent\js\jquery-ui\images\ui-icons_888888_256x240.png" />
+    <Content Include="NewContent\js\jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="NewContent\js\jquery-ui\jquery-ui.min.css" />
+    <Content Include="NewContent\js\jquery-ui\jquery-ui.min.js" />
+    <Content Include="NewContent\js\jquery\jquery-2.1.1.min.js" />
+    <Content Include="NewContent\js\layout\jquery.layout.js" />
+    <Content Include="NewContent\js\loading\pace.min.js" />
+    <Content Include="NewContent\js\md5\jquery.md5.js" />
+    <Content Include="NewContent\js\qrcode\jquery.qrcode.js" />
+    <Content Include="NewContent\js\qrcode\qrcode.js" />
+    <Content Include="NewContent\js\select2\select2.min.css" />
+    <Content Include="NewContent\js\select2\select2.min.js" />
+    <Content Include="NewContent\js\simditor\css\simditor.css" />
+    <Content Include="NewContent\js\simditor\js\hotkeys.js" />
+    <Content Include="NewContent\js\simditor\js\hotkeys.min.js" />
+    <Content Include="NewContent\js\simditor\js\module.js" />
+    <Content Include="NewContent\js\simditor\js\module.min.js" />
+    <Content Include="NewContent\js\simditor\js\simditor.js" />
+    <Content Include="NewContent\js\simditor\js\simditor.min.js" />
+    <Content Include="NewContent\js\simditor\js\uploader.js" />
+    <Content Include="NewContent\js\simditor\js\uploader.min.js" />
+    <Content Include="NewContent\js\validate\jquery.validate.min.js" />
+    <Content Include="NewContent\js\wdtree\images\icons\add.png" />
+    <Content Include="NewContent\js\wdtree\images\icons\addStep.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\addStep_dsbl.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\btn-arrow.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\Btn.Close.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\Btn.Refresh.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\cal.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\checkbox_0.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\checkbox_0.png" />
+    <Content Include="NewContent\js\wdtree\images\icons\checkbox_1.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\checkbox_1.png" />
+    <Content Include="NewContent\js\wdtree\images\icons\checkbox_2.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\checkbox_2.png" />
+    <Content Include="NewContent\js\wdtree\images\icons\circle_animation.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\delete.png" />
+    <Content Include="NewContent\js\wdtree\images\icons\delItem.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\delItem_dsbl.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\edit.png" />
+    <Content Include="NewContent\js\wdtree\images\icons\folder_close.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\ico1.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\ico2.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\ico3.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\ico4-1-1.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\ico4-1.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\ico4-2.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\ico4-3.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\ico4-4.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\ico4.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\ico5.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\ico6-1.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\ico6-2.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\ico6.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\indicator.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\information.png" />
+    <Content Include="NewContent\js\wdtree\images\icons\Item.Add.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\Item.Delete.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\Item.Edit.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\Item.Input.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\Item.Save.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\Item.Search.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\none.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\note.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\rowdelete.png" />
+    <Content Include="NewContent\js\wdtree\images\icons\s.gif" />
+    <Content Include="NewContent\js\wdtree\images\icons\table_refresh.png" />
+    <Content Include="NewContent\js\wdtree\images\icons\view.png" />
+    <Content Include="NewContent\js\wdtree\images\tree\arrows.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\cbs.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\drop-yes.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\elbow-end-minus-nl.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\elbow-end-minus.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\elbow-end-plus-nl.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\elbow-end-plus.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\elbow-end.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\elbow-line.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\elbow-minus-nl.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\elbow-minus.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\elbow-plus-nl.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\elbow-plus.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\elbow.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\folder-open.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\folder.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\leaf.gif" />
+    <Content Include="NewContent\js\wdtree\images\tree\loading.gif" />
+    <Content Include="NewContent\js\wdtree\tree.css" />
+    <Content Include="NewContent\js\wdtree\tree.js" />
+    <Content Include="NewContent\js\wizard\wizard.css" />
+    <Content Include="NewContent\js\wizard\wizard.js" />
+    <Content Include="NewContent\js\zsign\jquery.zsign.css" />
+    <Content Include="NewContent\js\zsign\jquery.zsign.js" />
+    <Content Include="NewContent\js\zsign\signet.gif" />
     <Content Include="Pad\SeatPad.aspx" />
     <Content Include="Scripts\Clock.js" />
     <Content Include="Scripts\Default.js" />
@@ -3210,6 +3445,20 @@
     <Compile Include="FunctionPages\UsersManage\UserInfo.aspx.designer.cs">
       <DependentUpon>UserInfo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FunctionPages\WechatCode\MyQRCode.aspx.cs">
+      <DependentUpon>MyQRCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FunctionPages\WechatCode\MyQRCode.aspx.designer.cs">
+      <DependentUpon>MyQRCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LogOut.aspx.cs">
       <DependentUpon>LogOut.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3244,6 +3493,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="FileDownLoad\" />
+    <Folder Include="QRCodeImages\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AuthorizeVerify\AuthorizeVerify.csproj">
@@ -3298,20 +3548,48 @@
     <None Include="extjs\res\images\access\form\date-trigger.psd" />
     <None Include="extjs\res\images\access\form\search-trigger.psd" />
     <None Include="extjs\res\images\access\form\trigger.psd" />
+    <Content Include="extjs\res\images\default\button\Thumbs.db" />
     <None Include="extjs\res\images\default\form\clear-trigger.psd" />
     <None Include="extjs\res\images\default\form\date-trigger.psd" />
     <None Include="extjs\res\images\default\form\search-trigger.psd" />
+    <Content Include="extjs\res\images\default\form\Thumbs.db" />
     <None Include="extjs\res\images\default\form\trigger-square.psd" />
     <None Include="extjs\res\images\default\form\trigger.psd" />
+    <Content Include="extjs\res\images\default\grid\Thumbs.db" />
+    <Content Include="extjs\res\images\default\menu\Thumbs.db" />
+    <Content Include="extjs\res\images\default\panel\Thumbs.db" />
+    <Content Include="extjs\res\images\default\qtip\Thumbs.db" />
+    <Content Include="extjs\res\images\default\shared\Thumbs.db" />
+    <Content Include="extjs\res\images\default\tabs\Thumbs.db" />
+    <Content Include="extjs\res\images\default\toolbar\Thumbs.db" />
     <None Include="extjs\res\images\default\window\left-corners.psd" />
+    <Content Include="extjs\res\images\default\window\left-corners.pspimage" />
     <None Include="extjs\res\images\default\window\left-right.psd" />
     <None Include="extjs\res\images\default\window\right-corners.psd" />
+    <Content Include="extjs\res\images\default\window\Thumbs.db" />
     <None Include="extjs\res\images\default\window\top-bottom.psd" />
     <Content Include="FunctionPages\SeatMonitor\SeatLayout.ashx" />
     <Content Include="FunctionPages\SchoolInfoManage\BespeakSeatGraph.ashx" />
     <Content Include="FunctionPages\SeatBespeak\SeatLayoutHandle.ashx" />
     <Content Include="FunctionPages\SeatBespeak\NowBespeakSeatLayout.ashx" />
     <Content Include="packages.config" />
+    <Content Include="NewContent\fonts\fontawesome-webfont.eot" />
+    <Content Include="NewContent\fonts\fontawesome-webfont.ttf" />
+    <Content Include="NewContent\fonts\fontawesome-webfont.woff" />
+    <Content Include="NewContent\fonts\fontawesome-webfont.woff2" />
+    <Content Include="NewContent\fonts\FontAwesome.otf" />
+    <Content Include="NewContent\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="NewContent\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="NewContent\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="NewContent\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="NewContent\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="NewContent\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="NewContent\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="NewContent\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="NewContent\fonts\weathericons-regular-webfontd41d.eot" />
+    <Content Include="NewContent\js\simditor\css\editor.scss" />
+    <Content Include="NewContent\js\simditor\css\fonticon.scss" />
+    <Content Include="NewContent\js\simditor\css\simditor.scss" />
     <None Include="Properties\PublishProfiles\test1.pubxml" />
     <None Include="Scripts\My97DatePicker\WdatePicker.js.bak" />
     <Content Include="ws_authorized_keys" />
@@ -3330,7 +3608,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>21933</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

@@ -65,7 +65,7 @@
     </ext:Form>
     <ext:ContentPanel ID="ContentPanel1" runat="server" ShowHeader="false" Title="操作"
         ShowBorder="false">
-        <table class="divOperate" width="100%" border="0" style="background: #DFE8F6;">
+        <table class="divOperate" width="100%" border="0" style="background: #d0ebe2;">
             <tr>
                 <td align="right" style="width: 50%;">
                     <ext:Button ID="btnBespeak" runat="server" Text="确认预约" OnClick="btnBespeak_Click" />

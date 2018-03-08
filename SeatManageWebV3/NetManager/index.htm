@@ -1,0 +1,79 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Ext Show</title>
+<link rel="stylesheet" type="text/css" href="pagesExt/extjs2.0/resources/css/ext-all.css" />
+<link rel="stylesheet" type="text/css" href="pagesExt/css/style.css" />
+<script type="text/javascript" src="pagesExt/extjs2.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="pagesExt/extjs2.0/ext-all.js"></script>
+<script type="text/javascript" src="pagesExt/extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+<script type="text/javascript" src="pagesExt/extjs2.0/ext/themeChange.js"></script>
+</head>
+<script type="text/javascript">
+	Ext.onReady(function(){
+		Ext.BLANK_IMAGE_URL = 'pagesExt/extjs2.0/resources/images/default/s.gif';
+		var root = new Ext.tree.TreeNode({
+			text : 'Ext show',
+			//url : 'pagesExt/about.jsp',
+			expanded : true//Ĭ��չ�����ڵ�
+		});
+
+		var menu = new Ext.tree.TreePanel({
+			border : false,
+			root : root,
+			hrefTarget : 'mainContent',
+			listeners : {
+				click : function(node,e){
+					mainPanel.load({
+						//url:node.attributes.url,
+						callback : function(){
+							mainPanel.setTitle(node.text);
+						},
+						scripts: true
+					});
+				}
+			}
+			,
+			tbar : [
+				'skin select:',
+				{
+					xtype : 'themeChange',
+					width : 80,
+					listWidth : 80
+				},
+				'->'
+			]
+		});
+		new Ext.Viewport({
+			title : 'Ext View Demo',
+			layout:'border',//��񲼾�
+			items: [{
+				title : 'Some thing to show',
+				collapsible: true,
+				html : '<br><center><font size = 6>Nothing show </font></center>',
+				region: 'north',
+				height: 100
+			},{
+				title : 'menu show',
+				items : menu,
+				split:true,
+				collapsible: true,
+				region:'west',//ָ���������������Ϊwest
+				width: 150
+			},{
+				title: 'System descprition',
+				contentEl : 'aboutDiv',
+				collapsible: true,
+				id : 'mainContent',
+				region:'center'//ָ���������������Ϊcenter
+			}]
+		});
+		var mainPanel = Ext.getCmp('mainContent');
+	});
+</script>
+<body>
+<div id='aboutDiv' style='height:96%;width:100%'>
+
+</div>
+</body>
+</html>

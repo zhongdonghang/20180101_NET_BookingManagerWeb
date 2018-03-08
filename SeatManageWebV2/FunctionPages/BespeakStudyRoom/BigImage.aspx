@@ -9,7 +9,7 @@
         .borderStyle
         {
             border-collapse: collapse;
-            border: 0px dotted #DFE8F6;
+            border: 0px dotted #d0ebe2;
             border-width: 5px;
         }
     </style>
