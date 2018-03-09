@@ -32,6 +32,7 @@ namespace SeatManageWebV2.FunctionPages.WechatCode
                     // string filename = Guid.NewGuid().ToString();
                     path = Server.MapPath("~/QRCodeImages/" + LoginID + ".jpg");
                     bitmap.Save(path, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    bitmap.Dispose();
                 }
 
                 Image1.ImageUrl = "/QRCodeImages/" + LoginID + ".jpg";

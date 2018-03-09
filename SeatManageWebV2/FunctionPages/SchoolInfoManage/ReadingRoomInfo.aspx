@@ -44,6 +44,11 @@
                 Title="设置" IFrameUrl="ReadingRoomSetting.aspx" HeaderText="设置" TextAlign="Center" />
             <ext:LinkButtonField Width="35px" CommandName="ActionDelete" Icon="Delete"
                 ConfirmTarget="Top" ColumnID="ReadingRoomdelete" ToolTip="删除阅览室" HeaderText="删除" />
+            <ext:LinkButtonField Width="120px" CommandName="ActionPrint" Icon="Printer"
+                ConfirmTarget="Top" ColumnID="ReadingRoomSeatCodePrint" ToolTip="生成座位码" HeaderText="生成座位码" />
+            <ext:WindowField Width="150px" WindowID="WindowSetting" Icon="Eye" ToolTip="查看座位码"
+                DataIFrameUrlFields="ReadingRoomNo,ReadingRoomName" DataIFrameUrlFormatString="ReadRoomSeatQRCode.aspx?id={0}"
+                Title="查看座位码" IFrameUrl="ReadRoomSeatQRCode.aspx" HeaderText="查看座位码" TextAlign="Center" />
         </Columns>
     </ext:Grid>
     <ext:Window ID="WindowEdit" Title="阅览室信息设置" Popup="false" EnableIFrame="true" IFrameUrl="about:blank"

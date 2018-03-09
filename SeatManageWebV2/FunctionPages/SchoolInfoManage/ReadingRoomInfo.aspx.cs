@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using SeatManageWebV2.Code;
+using System.IO;
+using SeatManage.SeatManageComm;
 
 namespace SeatManageWebV2.FunctionPages.SchoolInfoManage
 {
@@ -112,6 +115,34 @@ namespace SeatManageWebV2.FunctionPages.SchoolInfoManage
             //        BindReadingRoom();
             //    }
             //}
+            if (e.CommandName == "ActionPrint")
+            {
+
+
+                try
+                {
+                    string roomNo = GridReadRoom.Rows[e.RowIndex].DataKeys[0].ToString();
+                    string roomName = GridReadRoom.Rows[e.RowIndex].DataKeys[1].ToString();
+                    string subPath = Server.MapPath("~/SeatQRCode/" + roomNo + "/");
+                    if (Directory.Exists(subPath))
+                    {
+                        Directory.Delete(subPath, true);
+                    }
+                    List<SeatManage.ClassModel.Seat> listSeat = SeatManage.Bll.T_SM_Seat.GetSeatListByRoomNum(roomNo, false);
+                    foreach (SeatManage.ClassModel.Seat item in listSeat)
+                    {
+                        SeatQRCodeManager.CreatSingleSeatQRCode(roomNo, roomName,item.SeatNo);
+                    }
+
+                    FineUI.Alert.Show("生成座位二维码成功");
+                }
+                catch (Exception ex)
+                {
+                    WriteLog.Write(ex.ToString());
+                    throw;
+                }
+            
+            }
         }
 
     }

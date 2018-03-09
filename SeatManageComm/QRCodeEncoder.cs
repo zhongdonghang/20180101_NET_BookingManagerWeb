@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using ThoughtWorks.QRCode.Codec;
+using ThoughtWorks.QRCode.Codec.Util;
 
 namespace SeatManage.SeatManageComm
 {

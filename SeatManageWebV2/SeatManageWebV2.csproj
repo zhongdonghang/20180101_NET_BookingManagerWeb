@@ -94,6 +94,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLL\FredCK.FCKeditorV2.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Office.Interop.Excel, Version=10.0.4504.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <SpecificVersion>False</SpecificVersion>
@@ -138,6 +142,7 @@
     <Content Include="DLL\ExtAspNet.dll" />
     <Content Include="DLL\FineUI.dll" />
     <Content Include="DLL\FredCK.FCKeditorV2.dll" />
+    <Content Include="DLL\ICSharpCode.SharpZipLib.dll" />
     <Content Include="DLL\Microsoft.Office.Interop.Excel.dll" />
     <Content Include="DLL\Newtonsoft.Json.dll" />
     <Content Include="DLL\Wilco.SyntaxHighlighter.dll" />
@@ -711,6 +716,7 @@
     <Content Include="FunctionPages\RegulationRulesSetting\AccessSetting.aspx" />
     <Content Include="FunctionPages\RegulationRulesSetting\PecketWebSetting.aspx" />
     <Content Include="FunctionPages\RegulationRulesSetting\PushMsgSetting.aspx" />
+    <Content Include="FunctionPages\SchoolInfoManage\ReadRoomSeatQRCode.aspx" />
     <Content Include="FunctionPages\SeatBespeak\BespeakNowDayHandle.aspx" />
     <Content Include="FunctionPages\SeatBespeak\BespeakNowDaySeat.aspx" />
     <Content Include="FunctionPages\SeatBespeak\BespeakNowDaySeatLayout.aspx" />
@@ -2872,7 +2878,9 @@
     <Compile Include="Code\ReadingRoomStatistics.cs" />
     <Compile Include="Code\ReadingRoomTreeNodes.cs" />
     <Compile Include="Code\SeatHandleClass.cs" />
+    <Compile Include="Code\SeatQRCodeManager.cs" />
     <Compile Include="Code\WorkSync.cs" />
+    <Compile Include="Code\ZipHelper.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3054,6 +3062,13 @@
     </Compile>
     <Compile Include="FunctionPages\RegulationRulesSetting\PushMsgSetting.aspx.designer.cs">
       <DependentUpon>PushMsgSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionPages\SchoolInfoManage\ReadRoomSeatQRCode.aspx.cs">
+      <DependentUpon>ReadRoomSeatQRCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FunctionPages\SchoolInfoManage\ReadRoomSeatQRCode.aspx.designer.cs">
+      <DependentUpon>ReadRoomSeatQRCode.aspx</DependentUpon>
     </Compile>
     <Compile Include="FunctionPages\SeatBespeak\BespeakNowDayHandle.aspx.cs">
       <DependentUpon>BespeakNowDayHandle.aspx</DependentUpon>
@@ -3494,6 +3509,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="FileDownLoad\" />
     <Folder Include="QRCodeImages\" />
+    <Folder Include="SeatQRCode\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AuthorizeVerify\AuthorizeVerify.csproj">
