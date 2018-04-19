@@ -2827,7 +2827,6 @@
     <Content Include="Styles\Pad.css" />
     <Content Include="Styles\SeatGraph.css" />
     <Content Include="Styles\Site.css" />
-    <Content Include="Default.aspx" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
@@ -2881,13 +2880,6 @@
     <Compile Include="Code\SeatQRCodeManager.cs" />
     <Compile Include="Code\WorkSync.cs" />
     <Compile Include="Code\ZipHelper.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Florms\FormSYS.aspx.cs">
       <DependentUpon>FormSYS.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
